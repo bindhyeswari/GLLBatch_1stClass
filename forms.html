@@ -3,17 +3,21 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Lato:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="bower_components/open-sans-fontface/open-sans.css"/>
     <style>
         body{
             font:  300 1em 'Open Sans';
             background-color: #555;
+            margin: 0;
+            padding: 0;
         }
         #signup_form {
-            width: 500px;
-            /*border: 1px solid gray;*/
+            width: 400px;
+            /*border: 1px solid white;*/
             float: right;
-            padding: 10px;
+            /*padding: 10px;*/
 
         }
         input{
@@ -44,9 +48,46 @@
             padding-top: 0;
             font-size: 0.85em;
         }
+       nav {
+            background-color: white;
+           float: left;
+           width: 100%;
+           margin-bottom: 1em;
+       }
+
+        nav > a {
+            float: right;
+            font: 700 1em 'Open Sans';
+            text-decoration: none; /*do not use the underline*/
+            color: #555;
+            display: inline-block;
+            padding: 1em 0.5em;
+            margin: 0.25em;
+        }
+        nav > a:hover{
+            color: dodgerblue;
+        }
+        nav > a:first-child {
+            padding-right: 1em;
+        }
+        nav > a:last-child {
+            float: left;
+            font-size: 1.5em;
+            padding: 0.35em 0 0 1em;
+        }
+
     </style>
 </head>
 <body>
+
+<nav>
+    <a href="https://github.com/blog">Blog</a>
+    <a href="https://enterprise.github.com/">Enterprise</a>
+    <a href="https://github.com/features">Features</a>
+    <a href="https://github.com/explore">Explore</a>
+    <a href="https://github.com/explore">GitHub</a>
+</nav>
+
 <form id="signup_form" action="/signupdata">
     <input type="text" placeholder="Pick a username ... "/>
     <input type="text" placeholder="Your email"/>
